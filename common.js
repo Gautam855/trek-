@@ -89,7 +89,7 @@ function initFooterLogic() {
 
     const sendMsg = () => {
       const text = waMessageInput.value.trim();
-      const url = `https://wa.me/919999999999${text ? '?text=' + encodeURIComponent(text) : ''}`;
+      const url = `https://wa.me/918860022081${text ? '?text=' + encodeURIComponent(text) : ''}`;
       window.open(url, '_blank');
       waMessageInput.value = '';
       waChatBox.classList.remove('open');
