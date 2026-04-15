@@ -1,0 +1,28 @@
+/* Adventure Detail Premium Styles - Self Contained */
+.batch-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.batch-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; letter-spacing: 0.05em; }
+.badge-available { background: #ecfdf5; color: #10b981; }
+.badge-limited { background: #fffbeb; color: #f59e0b; }
+.badge-full { background: #fef2f2; color: #ef4444; }
+.batch-date-wrap { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--dark); font-size: 1rem; }
+.batch-date-icon { font-size: 1.2rem; }
+.batch-details { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem; color: var(--gray-500); }
+.batch-detail-item { display: flex; align-items: center; gap: 4px; }
+.batch-action-btn { width: 100%; padding: 10px; font-size: 0.85rem; font-weight: 700; border-radius: 8px; cursor: pointer; transition: var(--transition); border: none; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.btn-batch-active { background: var(--green-pale); color: var(--green-dark); }
+.btn-batch-active:hover { background: var(--green-main); color: var(--white); }
+.btn-batch-disabled { background: var(--gray-100); color: var(--gray-400); cursor: not-allowed; }
+.sidebar-batch-item { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-bottom: 1px solid var(--gray-100); transition: var(--transition); cursor: pointer; }
+.sidebar-batch-item:hover { background: var(--gray-50); }
+.sidebar-batch-info { display: flex; flex-direction: column; }
+.sidebar-batch-date { font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+.sidebar-batch-status { font-size: 0.75rem; font-weight: 500; }
+.commitment-section { background: #0a0f0f; color: var(--white); padding: 120px 0; position: relative; overflow: hidden; }
+.commitment-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 50%); pointer-events: none; }
+.commitment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 50px; }
+.commitment-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 48px 32px; border-radius: 20px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(10px); }
+.commitment-card:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--green-main); transform: translateY(-10px); }
+.commitment-icon { width: 64px; height: 64px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 24px; transition: var(--transition); }
+.commitment-card:hover .commitment-icon { background: var(--green-main); box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); transform: scale(1.1); }
+.commitment-card h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 16px; font-weight: 700; color: var(--white); }
+.commitment-card p { font-size: 0.95rem; line-height: 1.6; color: rgba(255, 255, 255, 0.6); }

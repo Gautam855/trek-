@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiking – Trek Northern Himalayas</title>
+  <meta name="description"
+    content="Day hiking and multi-day hikes in the Northern Himalayas — Auli, Gorson Bugyal, Niti Valley and more." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Adventure Detail Premium Styles - Self Contained */
+    .batch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .batch-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-available {
+      background: #ecfdf5;
+      color: #10b981;
+    }
+
+    .badge-limited {
+      background: #fffbeb;
+      color: #f59e0b;
+    }
+
+    .badge-full {
+      background: #fef2f2;
+      color: #ef4444;
+    }
+
+    .batch-date-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--dark);
+      font-size: 1rem;
+    }
+
+    .batch-date-icon {
+      font-size: 1.2rem;
+    }
+
+    .batch-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    .batch-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .batch-action-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-batch-active {
+      background: var(--green-pale);
+      color: var(--green-dark);
+    }
+
+    .btn-batch-active:hover {
+      background: var(--green-main);
+      color: var(--white);
+    }
+
+    .btn-batch-disabled {
+      background: var(--gray-100);
+      color: var(--gray-400);
+      cursor: not-allowed;
+    }
+
+    .sidebar-batch-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid var(--gray-100);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .sidebar-batch-item:hover {
+      background: var(--gray-50);
+    }
+
+    .sidebar-batch-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-batch-date {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .sidebar-batch-status {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .commitment-section {
+      background: #0a0f0f;
+      color: var(--white);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .commitment-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .commitment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 50px;
+    }
+
+    .commitment-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 48px 32px;
+      border-radius: 20px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+    }
+
+    .commitment-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--green-main);
+      transform: translateY(-10px);
+    }
+
+    .commitment-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+
+    .commitment-card:hover .commitment-icon {
+      background: var(--green-main);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      transform: scale(1.1);
+    }
+
+    .commitment-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .commitment-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <header class="main-header" id="navbar">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <div class="top-contact">
+            <a href="mailto:info@treknorthernhimalayas.com"><span>✉️</span> info@treknorthernhimalayas.com</a>
+            <a href="tel:+919999999999"><span>📞</span> +91 99999 99999</a>
+          </div>
+          <div class="top-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505a3.017 3.017 0 00-2.122 2.136C0 8.055 0 12 0 12s0 3.945.501 5.814a3.017 3.017 0 002.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.945 24 12 24 12s0-3.945-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="navbar">
+        <div class="nav-inner">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'" />
+            <span>Trek Northern<br>Himalayas</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trekking.html">Treks</a></li>
+            <li><a href="hiking.html">Hiking</a></li>
+            <li><a href="camping.html">Camping</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a class="btn btn-wa btn-sm" href="https://wa.me/919999999999" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="trekking.html">Treks</a>
+      <a href="hiking.html">Hiking</a>
+      <a href="camping.html">Camping</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa"
+        style="text-align:center;justify-content:center;">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- ===== PARALLAX HERO ===== -->
+  <section class="hero parallax-hero" id="hero">
+    <div class="parallax-bg layer">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&q=80" alt="Himalayan Hiking">
+    </div>
+    <div class="parallax-mist layer" data-speed="0.15"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content fade-in">
+        <div class="hero-breadcrumb"><span></span> Trails & Nature</div>
+        <h1 class="hero-title">Himalayan<br><em>Hiking</em></h1>
+        <p class="hero-desc">From meadow strolls to sacred pilgrimages — discover trails that suit every pace and
+          passion.</p>
+      </div>
+    </div>
+    <div class="hero-bottom-mist"></div>
+  </section>
+
+  <!-- ===== FEATURED HIKES ===== -->
+  <section style="padding: 80px 0; background: var(--white);">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="tag">Featured Routes</span>
+        <h2 class="section-title">Popular Hikes</h2>
+      </div>
+      <div class="treks-grid">
+
+        <div class="trek-card fade-up">
+          <div class="trek-card-img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Auli Hike" />
+            <span class="difficulty-badge difficulty-easy">Easy</span>
+          </div>
+          <div class="trek-card-body">
+            <div class="trek-card-name">Auli – Gorson Bugyal Hike</div>
+            <div class="trek-card-meta">
+              <span class="trek-meta-item"><span class="icon">📅</span> 1 Day</span>
+              <span class="trek-meta-item"><span class="icon">↑</span> 3,056m</span>
+              <span class="trek-meta-item"><span class="icon">🚶</span> 9km</span>
+            </div>
+            <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:16px;">Glide through magnificent oak and
+              rhododendron forests to India's famous ski destination, with jaw-dropping Nanda Devi views all the way.
+            </p>
+            <div class="trek-card-footer">
+              <div class="trek-price"><span>Guided Day Hike</span></div>
+              <a href="hike-detail.html?trek=auli" class="btn btn-ghost btn-sm">Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="trek-card fade-up">
+          <div class="trek-card-img">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Chanab Valley" />
+            <span class="difficulty-badge difficulty-moderate">Moderate</span>
+          </div>
+          <div class="trek-card-body">
+            <div class="trek-card-name">Chanab Valley Hike</div>
+            <div class="trek-card-meta">
+              <span class="trek-meta-item"><span class="icon">📅</span> 1 Day</span>
+              <span class="trek-meta-item"><span class="icon">↑</span> 2,800m</span>
+              <span class="trek-meta-item"><span class="icon">🚶</span> 12km</span>
+            </div>
+            <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:16px;">A remote river valley trail rarely
+              explored by tourists. Pristine waterfalls, diverse bird life, and absolute tranquillity.</p>
+            <div class="trek-card-footer">
+              <div class="trek-price"><span>Guided Day Hike</span></div>
+              <a href="hike-detail.html?trek=chanab" class="btn btn-ghost btn-sm">Details →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAY HIKING SECTION ===== -->
+  <section class="day-hiking" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="tag">One-Day Adventures</span>
+        <h2 class="section-title">Day Hiking Trails</h2>
+        <p class="section-sub">Pack your boots and go — all these hikes can be completed in a single day</p>
+      </div>
+
+      <div class="hiking-list" id="hikingList">
+        <!-- Dynamic Hikes will be rendered here -->
+      </div>
+    </div>
+  </section>
+
+  </div>
+  </div>
+  </section>
+
+  <script>
+    /* =============================================
+       HIKING PAGE SCRIPTS
+       ============================================= */
+    const HIKES = [
+      { id: 'auli', name: 'Auli', icon: '🏔', sub: 'Meadows & Ski Slopes · Easy · 3,056m' },
+      { id: 'gorson', name: 'Gorson Bugyal', icon: '🌿', sub: 'Alpine Meadows · Easy–Moderate · 3,300m' },
+      { id: 'niti-valley', name: 'Niti Valley (Mini Amarnath)', icon: '🕌', sub: 'High-altitude Sacred Valley · Moderate' },
+      { id: 'chanab', name: 'Chanab Valley', icon: '🌊', sub: 'Remote River Valley · Moderate' },
+      { id: 'vasudhara', name: 'Badrinath (Vasudhara Falls)', icon: '💧', sub: 'Sacred Waterfall · Easy · 3,300m' },
+      { id: 'ansuya', name: 'Ansuya Devi – Atri Muni Cave', icon: '🛕', sub: 'Spiritual Forest Trail · Moderate' },
+      { id: 'urgam', name: 'Urgam Valley – Kalpeshwar Temple', icon: '🌸', sub: 'Hidden Temple Valley · Easy' },
+      { id: 'bhavishya', name: 'Bhavishya Badri', icon: '✨', sub: 'Future Badrinath Temple · Moderate' }
+    ];
+
+    function renderHikes() {
+      const list = document.getElementById('hikingList');
+      if (!list) return;
+      list.innerHTML = HIKES.map(hike => `
+      <div class="hiking-item fade-up" onclick="window.location.href='hike-detail.html?trek=${hike.id}'">
+        <div class="hiking-icon">${hike.icon}</div>
+        <div>
+          <div class="hiking-name">${hike.name}</div>
+          <div class="hiking-sub">${hike.sub}</div>
+        </div>
+      </div>
+    `).join('');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.hiking-item').forEach(el => observer.observe(el));
+    }
+
+    document.addEventListener('DOMContentLoaded', renderHikes);
+  </script>
+
+  <!-- ===== TIPS SECTION ===== -->
+  <section style="padding: 100px 0; background: var(--off-white);">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="tag">Prepare for the Trail</span>
+        <h2 class="section-title">Himalayan Hiking Tips</h2>
+        <p class="section-sub">Safety and comfort are our top priorities. Follow these essentials for a perfect day out.
+        </p>
+      </div>
+
+      <div class="tips-grid">
+        <!-- Tip 1 -->
+        <div class="tip-card fade-up">
+          <div class="tip-icon">🥾</div>
+          <h3 class="tip-title">Proper Footwear</h3>
+          <p class="tip-text">Never hike in new shoes. Wear broken-in, waterproof hiking boots with high ankle support
+            to prevent injury on uneven mountain terrain.</p>
+        </div>
+
+        <!-- Tip 2 -->
+        <div class="tip-card fade-up">
+          <div class="tip-icon">💧</div>
+          <h3 class="tip-title">Hydration is Key</h3>
+          <p class="tip-text">Carry at least 2.5 litres of water. High altitudes and mountain air dehydrate you faster
+            than you realize. Sip regularly, don't wait for thirst.</p>
+        </div>
+
+        <!-- Tip 3 -->
+        <div class="tip-card fade-up">
+          <div class="tip-icon">🧥</div>
+          <h3 class="tip-title">Smart Layering</h3>
+          <p class="tip-text">Weather changes in minutes. Follow the 3-layer rule: a base moisture-wicking layer, a warm
+            fleece, and a waterproof shell.</p>
+        </div>
+
+        <!-- Tip 4 -->
+        <div class="tip-card fade-up">
+          <div class="tip-icon">🕒</div>
+          <h3 class="tip-title">Start at Dawn</h3>
+          <p class="tip-text">The best mountain views are before noon. Starting early ensures you reach your destination
+            and return safely before sunset or afternoon mist.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMMERSIVE CTA ===== -->
+  <section class="immersive-cta">
+    <div class="immersive-bg">
+      <img src="assets/starry-camp.png" alt="Starry Camp">
+    </div>
+    <div class="container">
+      <div class="immersive-content">
+        <h2>The Stars Are Waiting</h2>
+        <p>There is a silence in the mountains that you can only hear when you are miles away from the world.</p>
+        <div class="cta-buttons-wrap">
+          <a href="trekking.html" class="btn btn-primary">Start Your Adventure</a>
+          <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa-outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="tag">Get In Touch</span>
+        <h2 class="section-title">Ready for the Trail?</h2>
+        <p class="section-sub">Need advice on which hike fits your schedule? Send us a message.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form fade-up" onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Interested Trail</label>
+            <select class="form-select">
+              <option value="">Select a trail...</option>
+              <option>Auli - Gorson Bugyal</option>
+              <option>Niti Valley</option>
+              <option>Chanab Valley</option>
+              <option>Vasudhara Falls</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Group size, dates..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Plan My Hike →</button>
+        </form>
+
+        <div class="contact-info fade-up">
+          <h3 class="contact-info-title">We're Here to Help</h3>
+          <p class="contact-info-text">Our team of experienced trekkers is always ready to assist you with route
+            planning, gear advice, and booking details. Reach out anytime!</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📱</div>
+              <div>
+                <div class="contact-detail-label">WhatsApp / Phone</div>
+                <div class="contact-detail-value">+91 99999 99999</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">info@treknorthernhimalayas.com</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div class="contact-detail-label">Base Location</div>
+                <div class="contact-detail-value">Chamoli, Uttarakhand, India</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">🕐</div>
+              <div>
+                <div class="contact-detail-label">Response Time</div>
+                <div class="contact-detail-value">Within 2-4 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div id="footer-placeholder"></div>
+  <script src="common.js"></script>
+  </script>
+
+</body>
+
+</html>

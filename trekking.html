@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treks – Trek Northern Himalayas</title>
+  <meta name="description"
+    content="Explore all Himalayan trekking routes — from beginner-friendly to challenging high-altitude expeditions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div>
+    <header class="main-header" id="navbar">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <div class="top-contact">
+            <a href="mailto:info@treknorthernhimalayas.com"><span>✉️</span> info@treknorthernhimalayas.com</a>
+            <a href="tel:+919999999999"><span>📞</span> +91 99999 99999</a>
+          </div>
+          <div class="top-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505a3.017 3.017 0 00-2.122 2.136C0 8.055 0 12 0 12s0 3.945.501 5.814a3.017 3.017 0 002.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.945 24 12 24 12s0-3.945-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="navbar">
+        <div class="nav-inner">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'" />
+            <span>Trek Northern<br>Himalayas</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trekking.html">Treks</a></li>
+            <li><a href="hiking.html">Hiking</a></li>
+            <li><a href="camping.html">Camping</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a class="btn btn-wa btn-sm" href="https://wa.me/919999999999" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="trekking.html">Treks</a>
+      <a href="hiking.html">Hiking</a>
+      <a href="camping.html">Camping</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa"
+        style="text-align:center;justify-content:center;">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- ===== PARALLAX HERO ===== -->
+  <section class="hero parallax-hero" id="hero">
+    <div class="parallax-bg layer">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80" alt="Himalayan Treks">
+    </div>
+    <div class="parallax-mist layer" data-speed="0.15"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content fade-in">
+        <div class="hero-breadcrumb"><span></span> All Routes</div>
+        <h1 class="hero-title">Himalayan<br><em>Treks</em></h1>
+        <p class="hero-desc">16 expertly curated routes from accessible ridges to formidable high-altitude expeditions.
+        </p>
+      </div>
+    </div>
+    <div class="hero-bottom-mist"></div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="filter-bar">
+    <div class="container filter-inner">
+      <span class="filter-label">Filter by Difficulty:</span>
+      <button class="filter-btn active" data-filter="all">All Treks</button>
+      <button class="filter-btn" data-filter="easy">Easy</button>
+      <button class="filter-btn" data-filter="moderate">Moderate</button>
+      <button class="filter-btn" data-filter="difficult">Difficult</button>
+    </div>
+  </div>
+
+  <!-- ===== TREKS GRID ===== -->
+  <section style="background:var(--off-white);">
+    <div class="container">
+      <div class="treks-page-grid" id="treksGrid">
+        <!-- Dynamic Treks will be rendered here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMMERSIVE CTA ===== -->
+  <section class="immersive-cta">
+    <div class="immersive-bg">
+      <img src="assets/starry-camp.png" alt="Starry Camp">
+    </div>
+    <div class="container">
+      <div class="immersive-content">
+        <h2>The Stars Are Waiting</h2>
+        <p>There is a silence in the mountains that you can only hear when you are miles away from the world.</p>
+        <div class="cta-buttons-wrap">
+          <a href="trekking.html" class="btn btn-primary">Start Your Adventure</a>
+          <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa-outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="tag">Get In Touch</span>
+        <h2 class="section-title">Can't Decide?</h2>
+        <p class="section-sub">Tell us your experience level and preferences, and we'll suggest the perfect trek for
+          you.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form fade-up" onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Interested Route</label>
+            <select class="form-select">
+              <option value="">Choose a route...</option>
+              <option>Pangarchulla</option>
+              <option>Roopkund</option>
+              <option>Brahmatal</option>
+              <option>Valley of Flowers</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Group size, dates, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Start Planning →</button>
+        </form>
+
+        <div class="contact-info fade-up">
+          <h3 class="contact-info-title">We're Here to Help</h3>
+          <p class="contact-info-text">Our team of experienced trekkers is always ready to assist you with route
+            planning, gear advice, and booking details. Reach out anytime!</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📱</div>
+              <div>
+                <div class="contact-detail-label">WhatsApp / Phone</div>
+                <div class="contact-detail-value">+91 99999 99999</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">info@treknorthernhimalayas.com</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div class="contact-detail-label">Base Location</div>
+                <div class="contact-detail-value">Chamoli, Uttarakhand, India</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">🕐</div>
+              <div>
+                <div class="contact-detail-label">Response Time</div>
+                <div class="contact-detail-value">Within 2-4 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'" />
+            Trek Northern Himalayas
+          </div>
+          <p class="footer-desc">Discover the thrill of unknown mountains. Expert-guided adventures in the majestic
+            Northern Himalayas since 2014.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trekking.html">Treks</a></li>
+            <li><a href="hiking.html">Hiking</a></li>
+            <li><a href="camping.html">Camping</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <ul>
+            <li><a href="https://wa.me/919999999999">WhatsApp Us</a></li>
+            <li><a href="index.html#contact">Send Enquiry</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 Trek Northern Himalayas. All rights reserved.</div>
+        <a href="https://wa.me/919999999999" target="_blank" class="btn btn-wa btn-sm">💬 WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== WHATSAPP FLOATING WIDGET ===== -->
+  <div class="wa-widget" id="waWidget">
+    <div class="wa-chat-box" id="waChatBox">
+      <div class="wa-chat-header">
+        <div class="wa-chat-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          <div>
+            <strong>Trek Northern Himalayas</strong>
+            <span>Typically replies in 10 mins</span>
+          </div>
+        </div>
+        <button class="wa-close" id="waCloseBtn">&times;</button>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-message">Hi there! 👋<br>How can we help you plan your next adventure?</div>
+      </div>
+      <div class="wa-chat-footer">
+        <div class="wa-input-wrap">
+          <input type="text" id="waMessageInput" placeholder="Type a message..." class="wa-chat-input" />
+          <button id="waSendBtn" class="wa-send-btn" aria-label="Send">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <button class="wa-float-btn" id="waFloatBtn" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--white)">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </button>
+  </div>
+  <script>
+    /* =============================================
+       TREKKING PAGE SCRIPTS
+       ============================================= */
+
+    // (Nav logic is now handled by common.js)
+
+
+    // Scroll to top
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Fade-up animation
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // WhatsApp helpers
+    function bookOnWhatsApp(trekName) {
+      const message = encodeURIComponent(`Hi! I'm interested in booking the ${trekName || 'trek'}. Please provide more details.`);
+      window.open(`https://wa.me/919999999999?text=${message}`, '_blank');
+    }
+    document.querySelectorAll('[data-wa-book]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const trek = btn.dataset.waBook || 'Trek';
+        bookOnWhatsApp(trek);
+      });
+    });
+
+    // Toast
+    function showToast(msg) {
+      let toast = document.querySelector('.toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // ---- Trek Data & Rendering ----
+    const TREKS = [
+      {
+        id: 'pangarchulla',
+        name: 'Pangarchulla Peak Trek',
+        difficulty: 'difficult',
+        duration: '7 Days',
+        altitude: '4,700m',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80',
+        desc: 'A dramatic peak summit with panoramic views of Nanda Devi. One of Uttarakhand\'s finest winter treks.'
+      },
+      {
+        id: 'har-ki-dun',
+        name: 'Har Ki Dun Trek',
+        difficulty: 'moderate',
+        duration: '7 Days',
+        altitude: '3,566m',
+        img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+        desc: 'A cradle-shaped hanging valley rich with folklore, ancient villages, and stunning Himalayan vistas.'
+      },
+      {
+        id: 'chopta',
+        name: 'Chopta Chandrashila Tungnath',
+        difficulty: 'moderate',
+        duration: '4 Days',
+        altitude: '4,130m',
+        img: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80',
+        desc: 'Trekking through enchanting forests to the world\'s highest Shiva temple, with 360° views.'
+      },
+      {
+        id: 'deoriatal',
+        name: 'Deoriatal Trek',
+        difficulty: 'easy',
+        duration: '2 Days',
+        altitude: '2,438m',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+        desc: 'A magical lake trek reflecting the Chaukhamba peaks. Perfect for beginners.'
+      },
+      {
+        id: 'ali-bedni',
+        name: 'Ali Bedni Bugyal Trek',
+        difficulty: 'moderate',
+        duration: '5 Days',
+        altitude: '3,352m',
+        img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80',
+        desc: 'Two of the most beautiful high-altitude meadows in India, draped in wildflowers.'
+      },
+      {
+        id: 'dodital',
+        name: 'Dodital Trek',
+        difficulty: 'moderate',
+        duration: '5 Days',
+        altitude: '3,307m',
+        img: 'https://images.unsplash.com/photo-1478827387698-1527781a4887?w=600&q=80',
+        desc: 'A pristine lake set in dense pine-oak forests, believed to be the birthplace of Lord Ganesha.'
+      },
+      {
+        id: 'dayara',
+        name: 'Dayara Bugyal',
+        difficulty: 'easy',
+        duration: '5 Days',
+        altitude: '3,408m',
+        img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80',
+        desc: 'One of India\'s most beautiful high-altitude meadows, a winter skiing paradise.'
+      },
+      {
+        id: 'gaumukh',
+        name: 'Gaumukh Tapovan',
+        difficulty: 'difficult',
+        duration: '8 Days',
+        altitude: '4,463m',
+        img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+        desc: 'Reach the source of the Ganges, then ascend to Tapovan meadow beneath Shivling peak.'
+      },
+      {
+        id: 'bali-pass',
+        name: 'Bali Pass Trek',
+        difficulty: 'difficult',
+        duration: '9 Days',
+        altitude: '4,960m',
+        img: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80',
+        desc: 'A rare high-altitude crossing with spectacular cross-range Himalayan panoramas.'
+      },
+      {
+        id: 'kalindi-khal',
+        name: 'Kalindi Khal Trek',
+        difficulty: 'difficult',
+        duration: '12 Days',
+        altitude: '5,947m',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+        desc: 'One of India\'s most challenging glacier crossings, linking Badrinath and Gangotri.'
+      },
+      {
+        id: 'kagbhusandi',
+        name: 'Kagbhusandi Lake',
+        difficulty: 'moderate',
+        duration: '7 Days',
+        altitude: '4,700m',
+        img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+        desc: 'A mystical lake mentioned in the Ramayana, nestled high above Badrinath.'
+      },
+      {
+        id: 'char-dham',
+        name: '4 Dham / 5 Kedar Yatra',
+        difficulty: 'moderate',
+        duration: '14 Days',
+        altitude: 'Uttarakhand',
+        img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80',
+        desc: 'Complete the sacred circuit of Char Dham or 5 Panch Kedar temples.'
+      },
+      {
+        id: 'valley-of-flowers',
+        name: 'Valley of Flowers',
+        difficulty: 'easy',
+        duration: '6 Days',
+        altitude: '3,658m',
+        img: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80',
+        desc: 'A UNESCO site bursting with wildflowers in a stunning glacial valley. July–Sept.'
+      },
+      {
+        id: 'brahmatal',
+        name: 'Brahmatal Trek',
+        difficulty: 'moderate',
+        duration: '6 Days',
+        altitude: '3,862m',
+        img: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80',
+        desc: 'Stunning winter trek with frozen lakes and views of Mt. Trishul and Nanda Ghunti.'
+      },
+      {
+        id: 'roopkund',
+        name: 'Roopkund Trek',
+        difficulty: 'difficult',
+        duration: '8 Days',
+        altitude: '5,029m',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+        desc: 'The mysterious skeleton lake. A challenging high-altitude trek with mesmerizing views.'
+      }
+    ];
+
+    function renderTreks(filter = 'all') {
+      const grid = document.getElementById('treksGrid');
+      if (!grid) return;
+      grid.innerHTML = TREKS
+        .filter(trek => filter === 'all' || trek.difficulty === filter)
+        .map(trek => `
+        <div class="trek-card fade-up" data-difficulty="${trek.difficulty}">
+          <div class="trek-card-img">
+            <img src="${trek.img}" alt="${trek.name}" loading="lazy" />
+            <span class="difficulty-badge difficulty-${trek.difficulty}">${trek.difficulty}</span>
+          </div>
+          <div class="trek-card-body">
+            <div class="trek-card-name">${trek.name}</div>
+            <div class="trek-card-meta">
+              <span class="trek-meta-item"><span>📅</span> ${trek.duration}</span>
+              <span class="trek-meta-item"><span>↑</span> ${trek.altitude}</span>
+            </div>
+            <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:16px;">${trek.desc}</p>
+            <div class="trek-card-footer">
+              <div class="trek-price"><span>Guided Expedition</span></div>
+              <a href="trek-detail.html?trek=${trek.id}" class="btn btn-ghost btn-sm">Details →</a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.trek-card').forEach(card => observer.observe(card));
+    }
+
+    // Initial load
+    renderTreks('all');
+
+    // Filter implementation
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderTreks(btn.dataset.filter);
+      });
+    });
+
+    // ---- WhatsApp Floating Widget ----
+    document.addEventListener('DOMContentLoaded', () => {
+      const waFloatBtn = document.getElementById('waFloatBtn');
+      const waChatBox = document.getElementById('waChatBox');
+      const waCloseBtn = document.getElementById('waCloseBtn');
+      const waMessageInput = document.getElementById('waMessageInput');
+      const waSendBtn = document.getElementById('waSendBtn');
+      const waNumber = '919999999999';
+
+      function sendMessage() {
+        let text = waMessageInput ? waMessageInput.value.trim() : '';
+        let waUrl = `https://wa.me/${waNumber}`;
+        if (text) waUrl += `?text=${encodeURIComponent(text)}`;
+        window.open(waUrl, '_blank');
+        if (waMessageInput) waMessageInput.value = '';
+        waChatBox.classList.remove('open');
+      }
+
+      if (waFloatBtn && waChatBox && waCloseBtn) {
+        waFloatBtn.addEventListener('click', () => {
+          waChatBox.classList.toggle('open');
+          if (waChatBox.classList.contains('open') && waMessageInput) {
+            setTimeout(() => waMessageInput.focus(), 300);
+          }
+        });
+        waCloseBtn.addEventListener('click', () => waChatBox.classList.remove('open'));
+        if (waSendBtn) waSendBtn.addEventListener('click', sendMessage);
+        if (waMessageInput) {
+          waMessageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+          });
+        }
+      }
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
+  <script src="common.js"></script>
+</body>
+
+</html>
